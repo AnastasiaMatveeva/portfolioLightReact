@@ -1,0 +1,61 @@
+
+.speciality {
+    background: var(--bg-light-1);
+    padding: 114px 0 184px 0;
+    position: relative;
+
+    @media(max-width: 1250px) {
+        padding: 114px 10px 184px;
+    }
+
+    &-blocks {
+        display: flex;
+        justify-content: center;
+        gap: 56px;
+        flex-wrap: wrap;
+        margin-top: 104px;
+
+        &-item {
+            width: 361px;
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 53px 57px;
+            text-align: center;
+            color: var(--color-cinder);
+
+            @media(max-width: 380px) {
+
+                width: 100%;
+            }
+
+
+            figure {
+                margin: 0 auto;
+                width: 56px;
+                height: 56px;
+            }
+        }
+    }
+
+    &-subheader {
+        justify-content: center;
+    }
+
+    &-subtitle {
+        text-align: center;
+    }
+
+    &-title {
+        font-family: var(--ff-jakarta);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        margin: 24px 0 16px;
+    }
+    &-text {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+}
+

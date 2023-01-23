@@ -1,0 +1,128 @@
+
+.header {
+    height: 122px;
+
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        background-color: var(--bg-white);
+        padding: 40px 10px 10px;
+        height: 122px;
+        border-bottom: 1px var(--color-light-2) solid;
+
+    }
+    &-logo {
+        display: flex;
+        align-items: center;
+    }
+    &-name {
+        margin-left: 16px;
+        font-family: var(--ff-jakarta);
+        font-weight: 700;
+
+    }
+
+    &-link {
+        width: 102px;
+        height: 49px;
+        border-radius: 8px;
+        text-align: center;
+        padding: 6px;
+        border: 1px var(--color-light-2) solid;
+
+        @media(max-width: 450px) {
+            display: none;
+        }
+    }
+
+    .nav {
+        
+        @media(max-width: 850px) {
+            position: absolute;
+            left: 0;
+            right: 100%;
+            top: 103px;
+            height: 100vh;
+            background: white;
+            z-index: 2;
+            overflow-x: hidden;
+            transition: 0.3s ease-in-out;
+
+            &.active {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &-list {
+            display: flex;
+            gap: 56px;
+
+            @media(max-width: 850px) {
+               
+                    flex-direction: column;
+                    padding: 30px;
+            }
+
+            &__item {
+                line-height: 20px;
+                cursor: pointer;
+                &:hover,
+                &:focus, 
+                &:active{
+                    color: var(--color-purple);
+                }
+            }
+        }
+       
+    }
+
+    .nav-btn {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    .nav-theme-btn{
+        &:hover {
+            path {
+                fill: var(--color-purple);
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+
+        @media(max-width: 850px) {
+            align-items: center;
+            display: flex;
+
+            svg {
+                fill: black;
+                height: 40px;
+            }
+        }
+    }
+}
+
+
+.dark .header-fixed {
+    background-color: var(--bg-cinder);
+}
+
+@media(max-width: 850px) {
+    .dark .nav {
+        background: var(--bg-cinder);
+    }
+}
