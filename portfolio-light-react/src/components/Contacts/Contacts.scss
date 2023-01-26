@@ -19,44 +19,7 @@
         }
     }
 
-    &-form {
-        width: 600px;
 
-        @media(max-width: 601px) {
-            width: 100%;
-        }
-       form {
-        display: flex;
-        flex-direction: column;
-       } 
-       input{
-        background-color: var(--color-white);
-        border-radius: 8px;
-        margin-bottom: 24px;
-        padding: 16px 24px;
-        width: 100%;
-       }
-        
-       textarea {
-        height: 189px;
-        border-radius: 8px;
-        resize: none;
-        overflow: auto;
-        padding: 16px 24px;
-        width: 100%;
-       }
-
-       &__btn {
-        padding: 16px 0;
-        border-radius: 8px;
-        background-color: var(--color-purple);
-        color: var(--color-white);
-        border: 1px solid var(--color-white);
-        box-shadow: 0px 4px 4px 0 rgba(0, 0, 0, 0.25);
-        margin-top: 48px;
-        width: 100%;
-       }
-    }
 
     &-details {
         width: 336px;

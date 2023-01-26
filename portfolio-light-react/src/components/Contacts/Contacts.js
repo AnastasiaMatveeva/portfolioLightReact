@@ -3,61 +3,43 @@ import './Contacts.scss';
 import emailIcon from "../../images/email.png";
 import phone from "../../images/phone.png";
 import adress from "../../images/adress.png";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
+import Form from "../Form/Form";
 
 
-const SERVICE_ID = "service_f67rd53";
-const TEMPLATE_ID = "template_njpad2b";
-const PUBLICK_KEY = "_Jz2boyM2l4OxZmR1";
+// const SERVICE_ID = "service_f67rd53";
+// const TEMPLATE_ID = "template_njpad2b";
+// const PUBLICK_KEY = "_Jz2boyM2l4OxZmR1";
 
 const Contacts = () => {
 
-    const [name, setName] = useState("");
-    const [email, setEmail] = useState("");
-    const [text, setText] = useState("");
+    // const [name, setName] = useState("");
+    // const [email, setEmail] = useState("");
+    // const [text, setText] = useState("");
 
-    const form = useRef();
+    // const [activeModal, setActiveModal] = useState(false);
+    // let isSucces = true;
 
-    const handleSubmit = (e) => {
+    // const form = useRef();
 
-        e.preventDefault();
+    // const handleSubmit = (e) => {
 
-        emailjs.sendForm(`${SERVICE_ID}` , `${TEMPLATE_ID}`, form.current, `${PUBLICK_KEY}`)
-        .then((result) => {
-            console.log(result.text);
-        }, (error) => {
-            console.log(error.text);
-        });
+    //     e.preventDefault();
+
+    //     emailjs.sendForm(`${SERVICE_ID}` , `${TEMPLATE_ID}`, form.current, `${PUBLICK_KEY}`)
+    //     .then((result) => {
+    //         console.log(result.text);
+    //     }, (error) => {
+    //         console.log(error.text);
+    //         isSucces = false;
+    //     });
 
         
-    }
+    // }
   return (
     <section className='contacts' id="Contacts">
         <div className="contacts-content container">
-                <form className="contacts-form" onSubmit={handleSubmit} ref={form}>
-                    <input 
-                        type="text" 
-                        name="to_name"
-                        className='contacts-form__name'
-                        placeholder='Name'
-                        value={name}
-                        onChange={e=>setName(e.target.value)}/>
-                    <input 
-                        type="email"
-                        name="from_name"
-                        className='contacts-form__email' 
-                        placeholder='Email'
-                        value={email}
-                        onChange={e=>setEmail(e.target.value)}/>
-                    <textarea 
-                        type="text" 
-                        name="message"
-                        className='contacts-form__message'
-                        placeholder='Message'
-                        value={text}
-                        onChange={e=>setText(e.target.value)}/>
-                    <button className="contacts-form__btn">Send Message</button>
-                </form>
+             <Form/>
             <div className="contacts-details">
                 <div className="contacts-details__item adress">
                     <figure>
@@ -88,7 +70,10 @@ const Contacts = () => {
                 </div>
             </div>
         </div>
+     
     </section>
+
+    
   )
 }
 
